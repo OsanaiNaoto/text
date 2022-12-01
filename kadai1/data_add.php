@@ -9,7 +9,7 @@
         個人情報登録<br />
         <br />
         <form method="POST" action="data_add_check.php">
-            情報を入力してください。<br />
+            情報を入力してください。<br>
             ID<br /><input type="text" name="id" style="width: 125px"><br />
             名前<br /><input type="text" name="name" style="width: 125px"><br />
             ふりがな<br /><input type="text" name="name_letter" style="width: 125px"><br />
