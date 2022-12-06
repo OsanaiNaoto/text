@@ -75,11 +75,11 @@
 
         if($name==''||$name_letter==''||$address_num==''||$address==''||$phone_num==''||$mail=='') {
             print '<form>';
-            print '<button type="button" onclick="history_back()">戻る</button>';
+            print '<button type="button" onclick="history.back()">戻る</button>';
             print '</form>';
         } else {
          print '<form method="post" action="staff_add_done.php">' ;
-         print '<input type="hid   den" name="name" value=" .$staff_name">';
+         print '<input type="hidden" name="name" value="$name">';
          print '<input type="hidden" name="pass" value=" .$staff_pass">';
          print '<br />';
          print '<input type="button" onclick="history.back()" value="戻る">';
