@@ -33,15 +33,18 @@
             $dbh = new PDO($dsn,$user);
             $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            $sql = "insert into mst_staff(name,password)values(?, ?)";
+            $sql = "insert into personal_data(id,name,name_letter,address_num,address,phone_num,email_address)values(?, ?)";
             $stmt = $dbh->prepare($sql);
-            $data[] = $staff_name;
-            $data[] = $staff_pass;
+            $data[] = $name;
+            $data[] = $name_letter;
+            $data[] = $address_num;
+            $data[] = $address;
+            $data[] = $phone_num;
             $stmt->execute($data);
 
             $dbh = null;
 
-            print $staff_name;
+            print $name;
             print "さんを追加しました。<br />";
         }
 
