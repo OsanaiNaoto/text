@@ -57,5 +57,7 @@
 
     ?>
 
+    <a href="data_list.php">戻る</a>
+
     </body>
 </html>
