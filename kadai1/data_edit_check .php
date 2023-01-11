@@ -8,7 +8,7 @@
     <body>
     <?php
         
-        
+        //20230111　idってどこに対応？
         $id  = $_POST["id"];
         $name= $_POST["name"];
         $name_letter = $_POST["name_letter"];
@@ -80,8 +80,13 @@
             print '</form>';
         } else {
          print '<form method="post" action="data_add_done.php">' ;
+         print '<input type="hidden" name="id" value="$id">';
          print '<input type="hidden" name="name" value="$name">';
-         print '<input type="hidden" name="pass" value=" .$staff_pass">';
+         print '<input type="hidden" name="name_letter" value="$name_letter">';
+         print '<input type="hidden" name="address_num" value="$address_num">';
+         print '<input type="hidden" name="address" value="$address">';
+         print '<input type="hidden" name="phone_num" value="$phone_num">';
+         print '<input type="hidden" name="mail" value="$mail">';
          print '<br />';
          print '<input type="button" onclick="history.back()" value="戻る">';
          print '<input type="submit" value="OK"?>';
