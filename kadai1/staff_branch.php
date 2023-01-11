@@ -1,10 +1,16 @@
-<!DOCTYPE html>
-<html lang="ja">
-    <head>
-        <meta charset="utf-8">
-        <title>個人情報</title>
-    </head>
+<?php
 
-    <body>
-    </body>
-</html>
+if(isset($_POST['edit'])==true)
+{
+    $staff_code=$_POST['staffcode'];
+    header('Location: staff_edit.php?staffcode='.$staff_code);
+    exit;
+}
+if(isset($_POST['delete'])==true)
+{
+    $staff_code=$_POST['staffcode'];
+    header('Location: staff_delete.php?staffcode='.$staff_code);
+    exit;
+}
+
+?>
