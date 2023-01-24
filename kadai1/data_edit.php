@@ -11,7 +11,12 @@
 try
 {
     $id = $_POST['id'];
-
+    $name= $_POST["name"];
+    $name_letter = $_POST["name_letter"];
+    $address_num = $_POST["address_num"];
+    $address = $_POST["address"];
+    $phone_num = $_POST["phone_num"];
+    $mail = $_POST["mail"];
     $dsn='mysql:dbname=shop;host=localhost;charset=utf8';
     $user='root';
     $password='';
@@ -21,10 +26,23 @@ try
     $sql='SELECT name FROM mst_staff WHERE code=?';
     $stmt=$dbh->prepare($sql);
     $data[]=$id;
+    $data[]=$name;
+    $data[]=$name_letter;
+    $data[]=$address_num;
+    $data[]=$phone_num;
+    $data[]=$mail;
+
     $stmt->execute($data);
 
     $rec=$stmt->fetch(PDO::FETCH_ASSOC);
-    $staff_code=$rec['name'];
+    
+    $id  = $rec["id"];
+    $name= $rec["name"];
+    $name_letter = $rec["name_letter"];
+    $address_num = $rec["address_num"];
+    $address = $rec["address"];
+    $phone_num = $rec["phone_num"];
+    $mail = $rec["mail"];
 
     $dbh=null;
 
