@@ -10,7 +10,7 @@
 
 try
 {
-    $id = $_POST['id'];
+    $id = $_GET['id'];
 
     $dsn='mysql:dbname=shop;host=localhost;charset=utf8';
     $user='root';
@@ -24,7 +24,7 @@ try
     $stmt->execute($data);
 
     $rec=$stmt->fetch(PDO::FETCH_ASSOC);
-    $staff_code=$rec['name'];
+    $name=$rec['name'];
 
     $dbh=null;
 
