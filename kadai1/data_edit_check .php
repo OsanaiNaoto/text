@@ -8,6 +8,7 @@
     <body>
     <?php
         
+        //20230111　idってどこに対応？
         $id  = $_POST["id"];
         $name= $_POST["name"];
         $name_letter = $_POST["name_letter"];
@@ -73,7 +74,7 @@
         }
 
 
-        if($id == ''||$name==''||$name_letter==''||$address_num==''||$address==''||$phone_num==''||$mail=='') {
+        if($name==''||$name_letter==''||$address_num==''||$address==''||$phone_num==''||$mail=='') {
             print '<form>';
             print '<button type="button" onclick="history.back()">戻る</button>';
             print '</form>';
