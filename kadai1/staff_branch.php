@@ -21,7 +21,7 @@ if(isset($_POST['delete'])==true)
     $address = $_POST["address"];
     $phone_num = $_POST["phone_num"];
     $mail = $_POST["mail"];
-    header('Location: data_delete.php?staffcode='.$staff_code);
+    header('Location: data_delete.php?id='.$id);
     exit;
 }
 

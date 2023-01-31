@@ -10,7 +10,7 @@
 
 try
 {
-<<<<<<< HEAD
+
     $id = $_POST['id'];
     $name= $_POST["name"];
     $name_letter = $_POST["name_letter"];
@@ -18,10 +18,9 @@ try
     $address = $_POST["address"];
     $phone_num = $_POST["phone_num"];
     $mail = $_POST["mail"];
-=======
+
     $id = $_GET['id'];
 
->>>>>>> 04189b936e2892c264ecd9bf4244eded174fef5a
     $dsn='mysql:dbname=shop;host=localhost;charset=utf8';
     $user='root';
     $password='';
@@ -40,7 +39,7 @@ try
     $stmt->execute($data);
 
     $rec=$stmt->fetch(PDO::FETCH_ASSOC);
-<<<<<<< HEAD
+
     
     $id  = $rec["id"];
     $name= $rec["name"];
@@ -49,13 +48,15 @@ try
     $address = $rec["address"];
     $phone_num = $rec["phone_num"];
     $mail = $rec["mail"];
-=======
+
     $name=$rec['name'];
->>>>>>> 04189b936e2892c264ecd9bf4244eded174fef5a
+
 
     $dbh=null;
 
 }
+
+
 catch(Exception $e)
 {
     print'ただいま障害により大変ご迷惑をお掛けしております。';
